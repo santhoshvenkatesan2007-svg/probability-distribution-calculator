@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="probability.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <form class="form">
+            <h2>Binomial Distribution Calculator</h2>
+            <h5>(Calculates Probability of events using Binomial Distribution)</h5>
+            <table>
+                <tr>
+                    <td>Population size (n)</td>
+                    <td><input type="number" id="n" class="input" name="n" min="0" placeholder="Enter the value of n">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sample size (x)</td>
+                    <td><input type="number" id="x1" class="input" name="x" min="0" placeholder="Enter the value of x">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Probability of Success (p)</td>
+                    <td><input type="number" id="p" class="input" name="p" min="0" max="1"
+                            placeholder="Enter the value of p"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="button" class="submit" onclick="binomial_calculate()">Calculate
+                            Probability</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="reset" class="reset">Reset</button></td>
+                </tr>
+
+            </table>
+        </form>
+        <p id="binomial" class="result">Probability : ____</p>
+
+    </div>
+
+    <div class="container">
+        <form class="form">
+            <h2>Poisson Distribution Calculator</h2>
+            <h5>(Calculates Probability of events using Poisson Distribution)</h5>
+            <table>
+                <tr>
+                    <td>Mean or Variance (Lambda)</td>
+                    <td><input type="number" id="lamb" class="input" name="lambda" min="0"
+                            placeholder="Enter the value of Lambda">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sample size (x)</td>
+                    <td><input type="number" id="x2" class="input" name="x" min="0" placeholder="Enter the value of x">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="button" class="submit" onclick="poisson_calculate()">Calculate
+                            Probability</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="reset" class="reset">Reset</button></td>
+                </tr>
+
+            </table>
+        </form>
+
+        <p id="poisson" class="result">Probability : ____</p>
+
+    </div>
+
+    <div class="container">
+        <form class="form">
+            <h2>Normal Distribution Calculator</h2>
+            <h5>(Calculates Probability Density using Normal Distribution)</h5>
+            <table>
+                <tr>
+                    <td>Mean (μ)</td>
+                    <td><input type="number" id="mu" class="input" name="mu" placeholder="Enter the value of μ"></td>
+                </tr>
+
+                <tr>
+                    <td>Standard Deviation (σ)</td>
+                    <td><input type="number" id="sigma" class="input" name="sigma" min="0"
+                            placeholder="Enter the value of σ"></td>
+                </tr>
+
+                <tr>
+                    <td>Value (x)</td>
+                    <td><input type="number" id="x3" class="input" name="x" placeholder="Enter the value of x"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="button" class="submit" onclick="normal_calculate()">Calculate
+                            Probability</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button type="reset" class="reset">Reset</button></td>
+                </tr>
+
+            </table>
+        </form>
+
+        <p id="normal" class="result">Probability : ____</p>
+
+    </div>
+    <script src="probability.js"></script>
+</body>
